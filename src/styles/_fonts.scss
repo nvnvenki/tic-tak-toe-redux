@@ -1,0 +1,54 @@
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.lh-24 {
+    line-height: 24px;
+}
+
+.lh-24 {
+    line-height: 25px;
+}
+
+.lh-18 {
+    line-height: 18px;
+}
+
+.lh-40 {
+    line-height: 40px;
+}
+
+.lh-13 {
+    line-height: 13px;
+}
+
+.ls-8 {
+    letter-spacing: 0.83px;
+}
+
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-yellow {
+    color: $yellow;
+}
+
+.font-white {
+    color: #fff;
+}
+
+@for $i from 8 through 50 {
+    .fs-#{$i} {
+        font-size: #{$i}px;
+    }
+}

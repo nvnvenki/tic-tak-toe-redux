@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./styles/styles.scss";
+import Header from './components/Header';
+import WelcomeCard from './components/WelcomeCard';
+import Board from './components/Board';
+import PlayerCard from './components/PlayerCard'
+import WinnerCard from './components/WinnerCard';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<div className="container">
+				{/* <WelcomeCard /> */}
+				{/* <div className="play-board flex flex-middle flex-even">
+					<PlayerCard />
+					<Board />
+					<PlayerCard />
+				</div> */}
+				<WinnerCard />
+			</div>
+		</div>
+	);
 }
 
 export default App;

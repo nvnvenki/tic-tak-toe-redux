@@ -1,0 +1,50 @@
+.winner-card-container {
+
+    .winner-card {
+        .player-card  {
+            .result {
+                font-size: 34px;
+                line-height: 37px;
+                letter-spacing: 1.22px;
+                font-weight: 400;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 30px;
+            }
+
+            .names {
+                padding: 32px;
+            }
+
+            .border-radius-15 {
+                border-radius: 25px;
+            }
+
+            .wins {
+                display: none;
+            }
+
+            .player {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .player-name {
+                margin-top: 22px;
+                margin-bottom: 16px;
+                font-size: 33px;
+                line-height: 44px;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-top: 48px;
+        padding-bottom: 60px;
+    }
+    
+}

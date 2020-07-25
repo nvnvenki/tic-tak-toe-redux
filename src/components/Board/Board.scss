@@ -1,0 +1,52 @@
+@import "../../styles/colors";
+
+.play-board {
+    .board-item {
+        &:nth-of-type(5) {
+            border: 1px dashed rgba($color: $borderColor, $alpha: 0.11);
+        }
+
+        &:nth-of-type(2) {
+            border: 1px dashed rgba($color: $borderColor, $alpha: 0.11);
+            border-top: 0;
+            border-bottom: 0;
+        }
+
+        &:nth-of-type(8) {
+            border: 1px dashed rgba($color: $borderColor, $alpha: 0.11);
+            border-top: 0;
+            border-bottom: 0;
+        }
+
+        &:nth-of-type(4) {
+            border: 1px dashed rgba($color: $borderColor, $alpha: 0.11);
+            border-left: 0;
+            border-right: 0;
+        }
+
+        &:nth-of-type(6) {
+            border: 1px dashed rgba($color: $borderColor, $alpha: 0.11);
+            border-left: 0;
+            border-right: 0;
+        }
+
+        border: 0px;
+
+        .item-o {
+            height: 81px;
+            width: 81px;
+            border: 13px solid $white;
+            border-radius: 50%;
+
+            &.yellow {
+                border-color: $yellow;
+            }
+
+            &.sm {
+                height: 43px;
+                width: 43px;
+                border-width: 8px;
+            }
+        }
+    }
+}
