@@ -48,3 +48,15 @@ body {
 .op-5 {
     opacity: 0.5;
 }
+
+.cp {
+    cursor: pointer;
+}
+
+.cna {
+    cursor: not-allowed;
+}
+
+.no-action {
+    pointer-events: none;
+}

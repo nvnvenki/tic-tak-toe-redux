@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from '../../App';
 
-export default () => {
+export default ({
+    
+}) => {
+    const { actions } = useContext(GlobalContext);
+
 
     const [ player1, setPlayer1 ] = useState("");
 
@@ -13,14 +18,16 @@ export default () => {
             <div className="name-form w-100 margin-top-34">
                 <div className="field flex flex-column w-100 margin-bottom-34">
                     <label htmlFor="player1" className="font-white uppercase fs-12 lh-18 margin-bottom-8">player 1</label>
-                    <input type="text" className="input" id="player1" onChange={e => setPlayer1(e.target.value)} />
+                    <input type="text" className="input" autoFocus autoComplete="off" id="player1" onChange={e => setPlayer1(e.target.value)} />
                 </div>
                 <div className="field flex flex-column w-100 margin-bottom-34">
                     <label htmlFor="player2" className="font-white uppercase fs-12 lh-18 margin-bottom-8">player 2</label>
-                    <input type="text" className="input" id="player2" onChange={e => setPlayer2(e.target.value)} />
+                    <input type="text" className="input" id="player2" autoComplete="off" onChange={e => setPlayer2(e.target.value)} />
                 </div>
 
-                <button disabled={player1.trim() == "" || player2.trim() == ""} className="button capitalize">continue</button>
+                <button disabled={player1.trim() == "" || player2.trim() == ""}  onClick={() => {
+                    actions.startGame(player1, player2);
+                }} className="button capitalize">continue</button>
             </div>
         </div>
     </div>

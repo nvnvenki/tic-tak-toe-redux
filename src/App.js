@@ -1,26 +1,31 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import "./styles/styles.scss";
 import Header from './components/Header';
-import WelcomeCard from './components/WelcomeCard';
-import Board from './components/Board';
-import PlayerCard from './components/PlayerCard'
-import WinnerCard from './components/WinnerCard';
 
-function App() {
+
+import * as actions from './actions/gameActions';
+import TickTackToeBoard from './components/TickTackToeBoard';
+
+export const GlobalContext = React.createContext();
+
+const App = (props) => {
+
 	return (
 		<div className="App">
 			<Header />
-			<div className="container">
-				{/* <WelcomeCard /> */}
-				{/* <div className="play-board flex flex-middle flex-even">
-					<PlayerCard />
-					<Board />
-					<PlayerCard />
-				</div> */}
-				<WinnerCard />
-			</div>
+			<GlobalContext.Provider value={{actions: props, reduxState: props.state}}>
+				<TickTackToeBoard />
+			</GlobalContext.Provider>
 		</div>
 	);
 }
 
-export default App;
+
+const mapStateToProps = state => {
+    return {
+        state: state,
+    };
+}
+
+export default connect(mapStateToProps, actions)(App)

@@ -1,0 +1,18 @@
+@import "../../../styles/colors";
+
+.item-o {
+    height: 81px;
+    width: 81px;
+    border: 13px solid $white;
+    border-radius: 50%;
+
+    &.yellow {
+        border-color: $yellow;
+    }
+
+    &.sm {
+        height: 43px;
+        width: 43px;
+        border-width: 8px;
+    }
+}
