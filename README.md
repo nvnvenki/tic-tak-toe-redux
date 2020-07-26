@@ -2,9 +2,13 @@
 
 As per Design https://xd.adobe.com/view/87a51333-ce70-40c8-4195-52100f6ab3c5-f194/
 
-## Available Scripts	
+## Steps to run	
 
 In the project directory, you can run:	
+
+### `yarn`
+
+Installs all the dependencies.
 
 ### `yarn start`	
 
